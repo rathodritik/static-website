@@ -1,4 +1,4 @@
-name: Deploy Static Website to Nginx
+name: Deploy Static Website to Apache2
 
 on:
   push:
@@ -16,4 +16,4 @@ jobs:
       - name: Deploy Website
         run: |
           sudo cp -r ./* /var/www/html/
-          sudo systemctl restart nginx
+          sudo systemctl restart apache2
